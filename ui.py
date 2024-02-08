@@ -31,4 +31,20 @@ class ConverterGUI:
                 messagebox.showinfo('Conversion completed', f'The DOCX file has been created in {result}')
             except Exception as e:
                 messagebox.showerror('Error', f'The conversion has failed: {e}')
-                
+
+    def convert_to_pdf(self):
+        docx_file = self.select_file()
+        if docx_file:
+            try:
+                result = convert_docx_to_pdf(docx_file)
+                messagebox.showinfo('Conversion completed', f'The PDF file has been created in {result}')
+            except Exception as e:
+                messagebox.showerror('Error', f'The conversion has failed: {e}')
+
+def main():
+    root = tk.Tk()
+    app = ConverterGUI(root)
+    root.mainloop()
+
+if __name__ == '__main__':
+    main()
