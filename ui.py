@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog, messagebox
-#from pdf_handler import convert_pdf_to_docx
-#from docx_handler import convert_docx_to_pdf
+from pdf_handler import convert_pdf_to_docx
+from docx_handler import convert_docx_to_pdf
 
 class ConverterGUI:
     def __init__(self, root):
