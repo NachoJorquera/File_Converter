@@ -6,16 +6,19 @@ from docx_handler import convert_docx_to_pdf
 class ConverterGUI:
     def __init__(self, root):
         self.root = root
-        root.title('File Converter PDF/DOCX')
+        root.title('File Converter')
 
         # Tamaño de la ventana
         root.geometry('400x200')
+
+        # Fondo de la ventana
+        self.root.config(bg = '#1A936F')
 
         # Botón para convertir de PDF a DOCX
         self.btn_convert_pdf = tk.Button(root, text='Convert PDF to DOCX', command=self.convert_to_docx)
         self.btn_convert_pdf.pack(pady=20)
 
-        #Botón para cpnvertir de DOCX a PDF
+        #Botón para convertir de DOCX a PDF
         self.btn_convert_docx = tk.Button(root, text='Convert DOCX to PDF', command=self.convert_to_pdf)
         self.btn_convert_docx.pack(pady=20)
 
