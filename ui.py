@@ -12,14 +12,14 @@ class ConverterGUI:
         root.geometry('400x200')
 
         # Fondo de la ventana
-        self.root.config(bg = '#1A936F')
+        root.config(bg = '#1A936F')
 
         # Botón para convertir de PDF a DOCX
-        self.btn_convert_pdf = tk.Button(root, text='Convert PDF to DOCX', command=self.convert_to_docx)
+        self.btn_convert_pdf = tk.Button(root, text='Convert PDF to DOCX', command=self.convert_to_docx, style="BW.TButton")
         self.btn_convert_pdf.pack(pady=20)
 
         #Botón para convertir de DOCX a PDF
-        self.btn_convert_docx = tk.Button(root, text='Convert DOCX to PDF', command=self.convert_to_pdf)
+        self.btn_convert_docx = tk.Button(root, text='Convert DOCX to PDF', command=self.convert_to_pdf, style="BW.TButton")
         self.btn_convert_docx.pack(pady=20)
 
     def select_file(self):
